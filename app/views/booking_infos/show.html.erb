@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @booking_info.User_Name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @booking_info.email %>
+</p>
+
+<p>
+  <strong>Ticket type:</strong>
+  <%= @booking_info.Ticket_Type %>
+</p>
+
+<p>
+  <strong>No of tickets:</strong>
+  <%= @booking_info.No_Of_Tickets %>
+</p>
+
+<p>
+  <strong>Advance:</strong>
+  <%= @booking_info.Advance %>
+</p>
+
+<%= link_to 'Edit', edit_booking_info_path(@booking_info) %> |
+<%= link_to 'Back', booking_infos_path %>

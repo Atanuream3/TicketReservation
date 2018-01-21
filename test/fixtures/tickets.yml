@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticket_type: MyString
+  total_seats: 1
+  available_seats: 1
+  reserved_seats: 1
+
+two:
+  ticket_type: MyString
+  total_seats: 1
+  available_seats: 1
+  reserved_seats: 1

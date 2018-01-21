@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  User_Name: MyString
+  email: MyString
+  Ticket_Type: MyString
+  No_Of_Tickets: 1
+  Advance: 1
+
+two:
+  User_Name: MyString
+  email: MyString
+  Ticket_Type: MyString
+  No_Of_Tickets: 1
+  Advance: 1

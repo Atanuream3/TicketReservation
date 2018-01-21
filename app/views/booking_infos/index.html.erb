@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Booking Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Email</th>
+      <th>Ticket type</th>
+      <th>No of tickets</th>
+      <th>Advance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @booking_infos.each do |booking_info| %>
+      <tr>
+        <td><%= booking_info.User_Name %></td>
+        <td><%= booking_info.email %></td>
+        <td><%= booking_info.Ticket_Type %></td>
+        <td><%= booking_info.No_Of_Tickets %></td>
+        <td><%= booking_info.Advance %></td>
+        <td><%= link_to 'Show', booking_info %></td>
+        <td><%= link_to 'Edit', edit_booking_info_path(booking_info) %></td>
+        <td><%= link_to 'Destroy', booking_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Booking info', new_booking_info_path %>
