@@ -30,4 +30,8 @@
 
 <br>
 
-<%= link_to 'New Ticket', new_ticket_path %>
+<%= button_to "New Ticket", new_ticket_path, class: "btn btn-success", method: "get"%>
+<br>
+<%= button_to "Book Ticket", new_booking_info_path, class: "btn btn-success", method: "get"%>
+<br>
+<%= button_to "Ticket List", booking_infos_path, class: "btn btn-success", method: "get"%>
