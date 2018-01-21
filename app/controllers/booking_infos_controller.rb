@@ -28,6 +28,13 @@ class BookingInfosController < ApplicationController
 
     respond_to do |format|
       if @booking_info.save
+        ticket = Ticket.where(ticket_type: params['booking_info']['Ticket_Type']).first
+        if ticket
+          avail_ticket = ticket.available_seats - params['booking_info']['No_Of_Tickets'].to_i
+          res_ticket = ticket.reserved_seats + params['booking_info']['No_Of_Tickets'].to_i
+          ticket.update(available_seats: avail_ticket, reserved_seats: res_ticket)
+          ticket.save
+        end
         format.html { redirect_to @booking_info, notice: 'Booking info was successfully created.' }
         format.json { render :show, status: :created, location: @booking_info }
       else
