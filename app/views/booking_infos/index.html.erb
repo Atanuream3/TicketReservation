@@ -2,7 +2,7 @@
 
 <h1>Listing Booking Infos</h1>
 
-<table>
+<table class='table table-hover table-bordered'>
   <thead>
     <tr>
       <th>User name</th>
@@ -10,7 +10,7 @@
       <th>Ticket type</th>
       <th>No of tickets</th>
       <th>Advance</th>
-      <th colspan="3"></th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -22,14 +22,11 @@
         <td><%= booking_info.Ticket_Type %></td>
         <td><%= booking_info.No_Of_Tickets %></td>
         <td><%= booking_info.Advance %></td>
-        <td><%= link_to 'Show', booking_info %></td>
-        <td><%= link_to 'Edit', edit_booking_info_path(booking_info) %></td>
-        <td><%= link_to 'Destroy', booking_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_booking_info_path(booking_info) %>
+          <%= link_to 'Destroy', booking_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Booking info', new_booking_info_path %>
